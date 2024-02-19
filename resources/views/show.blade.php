@@ -109,5 +109,8 @@
                 </div>
             </div>
         </div>
+        <div class="text-center py-3">
+            <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}" class="btn btn-sm btn-warning">Edit</a>
+        </div>
     </div>
 @endsection

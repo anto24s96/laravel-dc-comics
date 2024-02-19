@@ -29,9 +29,13 @@
             </div>
 
             <div class="row">
-                <div class="col-12 text-center">
-                    <div class="button_container">
+                <div class="col-12 text-center d-flex justify-content-center">
+                    <div class="button_container mx-2">
                         <span class="load_button text-white">LOAD MORE</span>
+                    </div>
+                    <div class="button_container mx-2">
+                        <a href="{{ route('comics.create') }}" class="load_button text-white text-decoration-none">ADD NEW
+                            COMICS</a>
                     </div>
                 </div>
             </div>

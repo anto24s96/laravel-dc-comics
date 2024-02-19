@@ -19,4 +19,8 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+Route::get('/charachters', function () {
+    return view('characters');
+})->name('characters');
+
 Route::resource('comics', ComicController::class);
