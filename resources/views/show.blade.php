@@ -113,14 +113,14 @@
         <div class="d-flex align-items-center justify-content-center">
             <div class="text-center py-3 px-2">
                 <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}"
-                    class="btn btn-sm btn-warning text-uppercase">Edit</a>
+                    class="btn btn-sm btn-warning text-uppercase fw-bolder">Edit</a>
             </div>
 
             <div class="px-2">
                 <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <button type="submit"class="btn btn-sm btn-warning text-uppercase">Cancella</button>
+                    <button type="submit"class="btn btn-sm btn-warning text-uppercase fw-bolder">Delete</button>
                 </form>
             </div>
         </div>
