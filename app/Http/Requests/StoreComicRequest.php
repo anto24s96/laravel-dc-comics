@@ -24,13 +24,13 @@ class StoreComicRequest extends FormRequest
     public function rules()
     {
         return [
-            'title'       => 'required|max:30',
+            'title'       => 'required|max:50',
             'description' => 'required',
             'thumb'       => 'max:255',
             'price'       => 'required',
-            'series'      => 'required|max:30',
+            'series'      => 'required|max:50',
             'sale_date'   => 'required',
-            'type'        => 'required|max:30',
+            'type'        => 'required|max:50',
             'artists'     => 'required',
             'writers'     => 'required'
         ];
