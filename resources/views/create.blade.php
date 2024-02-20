@@ -22,7 +22,7 @@
                         <div class="mb-3">
                             <label for="description" class="form-label">Description:</label>
                             <textarea class="form-control @error('description') is-invalid @enderror" id="textarea-description" rows="10"
-                                name="description">{{ old('description') }}</textarea>
+                                name="description" required>{{ old('description') }}</textarea>
                             @error('description')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
@@ -85,7 +85,7 @@
                         <div class="mb-3">
                             <label for="writers" class="form-label">Written by:</label>
                             <input type="text" class="form-control @error('writers') is-invalid @enderror" id="title"
-                                name="writers" value="{{ old('writers') }}">
+                                name="writers" required value="{{ old('writers') }}">
                             @error('writers')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror

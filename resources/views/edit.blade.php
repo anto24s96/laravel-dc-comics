@@ -24,7 +24,7 @@
                         <div class="mb-3">
                             <label for="description" class="form-label">Description:</label>
                             <textarea class="form-control @error('description') is-invalid @enderror" id="textarea-description" rows="10"
-                                name="description">{{ $comic['description'] }}</textarea>
+                                name="description" required>{{ $comic['description'] }}</textarea>
                             @error('description')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
@@ -87,7 +87,7 @@
                         <div class="mb-3">
                             <label for="writers" class="form-label">Written by:</label>
                             <input type="text" class="form-control @error('writers') is-invalid @enderror" id="title"
-                                name="writers" value="{{ implode(',', json_decode($comic['writers'])) }}">
+                                name="writers" required value="{{ implode(',', json_decode($comic['writers'])) }}">
                             @error('writers')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
