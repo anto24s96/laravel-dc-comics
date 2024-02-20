@@ -115,8 +115,14 @@ class ComicController extends Controller
      * @param  \App\Models\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Comic $comic)
+    public function destroy($id)
     {
-        //
+        //RECUPERO L'ELEMENTO DA CANCELLARE
+        $comic = Comic::find($id);
+
+        //CANCELLO L'ELEMENTO CON IL METODO DELETE
+        $comic->delete();
+
+        return redirect()->route('comics.index');
     }
 }
